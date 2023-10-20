@@ -10,14 +10,34 @@ let ortalama= numbers1.forEach((number) => (sum+=number)
     
 console.log(sum/numbers1.length);
 
-
+//! 2. yol
+let kareleri= numbers1.reduce((pre, cur)=>pre+cur)
+console.log(kareleri/numbers1.length);
 
 // soru 2: Soru: Bir dizi içerisindeki sayıların karesini alarak her bir sayıyı konsola yazdırın.
 
 let numbers3 = [1, 2, 3, 4, 5];
 
+let karesiniAl= numbers3.map((item) => (item**2))
+console.log(karesiniAl);
 
+//! 2. yol
+for (let i = 0; i < numbers3.length; i++) {
+    let kare = numbers3[i] * numbers3[i];
+    console.log(kare);
+  }
 
+//! 3. yol
+numbers3.forEach((curr) => {
+    let kare = curr * curr;
+    console.log(kare);
+  });
+
+//! 4. yol
+
+for(let i=0; i<numbers3.length;i++){
+    console.log(`Square of ${numbers3[i]} is ${Math.pow(numbers3[i],2)}`);
+}
 // soru 3: Soru: Bir dizi içerisindeki sayıların karesini alarak yeni bir dizi oluşturun. Ardından, bu yeni dizideki çift sayıları filtreleyerek sadece çift sayıları içeren bir başka dizi oluşturun.
 
 let numbers4 = [1, 2, 3, 4, 5];
@@ -27,8 +47,17 @@ console.log(kareHesapla);
 
 
 // soru 4: Soru: Verilen bir diziyi tersine çevirin, ancak yalnızca forEach kullanarak yapın (reverse() kullanmadan).
-
 let numbers5 = [1, 2, 3, 4, 5];
+
+let reverseDizi = [];
+
+numbers5.forEach((x) => {
+  reverseDizi.unshift(x);
+});
+console.log(reverseDizi);
+
+
+//! 2. yol
 const numbers = [1, 2, 3, 4, 5];
 const reversedNumbers = [];
 
