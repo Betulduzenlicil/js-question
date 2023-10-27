@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +6,52 @@
     <title>Document</title>
 </head>
 <body>
+
+
+    <input type="text" name="" id="text1">
+    <input type="button" id="button1" value="ADD" onclick="addelement()">
+    <input type="button" id="button2" value="Display"  onclick="displayelement()">
+    <div id="display"></div>
     <script src="./teamwork.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+</head>
+<body>
+    <input type="text" id="text1" value="New Element">
+    <button onclick="addelement()">Add Element</button>
+    <div id="display"></div>
+
+    <script>
+        let input = 0;
+        let arr1 = [];
+
+        function addelement() {
+            arr1[input] = document.getElementById('text1').value;
+            input++;
+            alert('Element ' + arr1[input - 1] + ' added at index ' + (input - 1));
+        }
+
+        function displayelement() {
+            let result = "<hr/>";
+
+            for (let i = 0; i < arr1.length; i++) {
+                result += 'Element ' + i + ' = ' + arr1[i] + '<br/>';
+            }
+
+            document.getElementById('display').innerHTML = result;
+        }
+
+        // Çağırılması gereken bir fonksiyon olmadığı için bu çağrıyı kaldırabilirsiniz
+        // addelement();
+
+        // displayelement fonksiyonunu çağırmak için bir çağrı eklemelisiniz
+        // displayelement();
+    </script>
 </body>
 </html>
