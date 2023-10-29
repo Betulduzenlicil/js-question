@@ -42,5 +42,67 @@
 // let isimListesi = ["Ali", "Ayşe", "Mehmet", "Fatma", "Hasan", "Zeynep", "Emre", "Selin", "Mustafa", "Elif", "Baran", "Gamze", "Eren", "Dilara", "Burak", "Pınar", "İsmail", "Sibel", "Murat", "Gülşah", "Ahmet", "Hatice", "Kemal", "Sevgi", "Yusuf", "Aslı", "Can", "Zehra", "Onur", "Ebru", "Serkan", "Nazlı", "Cemal", "Gonca", "Ercan", "Esra", "Hakan", "Nur"];
 
 
+//* asağıdaki arryde pozitif sayıları bulup toplayın
+
+const input=[1, -4, 12, 0, -3, 30, 42, -150]
+
+const sumSepet= input.filter((number)=>number>0)
+
+let cıftTopla=sumSepet.reduce((sum, number)=>sum+number,0)
+
+console.log(sumSepet);
+console.log(cıftTopla);
+
+
+//? alternative
+
+const input1 = [1, -4, 12, 0, -3, 30, 42, -150];
+const toplam = input1.reduce((acc, val) => (val > 0 ? acc + val : acc), 0);
+console.log(toplam);
+
+//* aşağıdaki cümlede büyük harfleri seçiniz
+ const input2= "John Ronald Revel Tolkien"
+
+const words= input2.split(" ").map(a=>a[0]).join("")
+console.log(words);
+
+
+//* aşağıdaki herbir elemanın karesini alan fonksiyon
+const numbers=[1,2,3,4,5]
+
+const squaredNumbers= numbers.map(a=>a*a)
+console.log(squaredNumbers);
+
+
+//* herbir elemanın uzunluğunu bul
+ const names=["Alice", "Bob", "Charlie"]
+
+ const nameLength=names.map((n)=>n.length)
+ console.log(nameLength);
+
+
+ //* herbir harfi büyük harfe çevir
+
+ const words1=["apple", "banana", "cherry"]
+
+// const upperWords=words1.map(word=>word.toUpperCase());
+// console.log(upperWords);
+
+
+//? alternative
+let capitalizedArray=[]
+for(let word of words1){
+    capitalizedArray.push(word.toUpperCase())
+    
+}
+console.log(capitalizedArray);
+
+
+
+let newA=["a","b"]
+let newB=["APPLE", "BANANA"]
+
+let bırles=[...newA, ...newB]
+console.log(bırles);
 
 

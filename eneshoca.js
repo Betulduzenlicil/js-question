@@ -200,3 +200,39 @@ function shuffle(arra1) {
 // }
 
 // console.log(results);
+
+
+//*Write a JavaScript function that generates all combinations of a string.
+//*Example string : 'dog'
+//*Expected Output : d,do,dog,o,og,g
+
+function combination (word){
+    let emptyArray=[];
+    for(let i=0; i < word.length; i++)
+    {
+        for(let j=i+1; j<=word.length ;j++)
+        {
+            emptyArray.push(word.slice(i,j))
+        }
+    }
+    return emptyArray;
+}
+console.log(combination("mustafa"))
+
+
+ //*alternative
+let str = "dog";
+
+const combiner = (str) => {
+  const arr = [];
+  for (let i = 1; i <= str.length; i++) {
+    arr.push(str.slice(0, i));
+  }
+  for (let j = 1; j < str.length; j++) {
+    arr.push(str.slice(j, str.length));
+  }
+  return arr.join();
+};
+
+console.log(combiner(str));
+console.log(combiner("kare"));
